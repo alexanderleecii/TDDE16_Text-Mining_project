@@ -23,6 +23,20 @@ A .env file containing the environment variables is also needed. It needs to be 
     LAST_FM_KEY=your_lastfm_api_key
     LAST_FM_SECRET=your_lastfm_shared_secret
 
+### Create "results" folder
+
+Add the following hierarchy to the project folder:
+    
+    results/
+        figures/
+            best-params/
+            default/
+        reports/
+            best-params/
+            default/
+
+This is needed to store the results of our experiments.
+
 ### Unzip the data
 
 Unzip "lyrics-gold-labels.zip" into "data/Clean_data/".
