@@ -10,13 +10,11 @@ RESULTS_FOLDER = os.environ.get("RESULTS_FOLDER")
 
 import time
 import csv
-import nltk
 from nltk.corpus import stopwords
 import re
 import string
 import matplotlib.pyplot as plt
 import pandas as pd
-import numpy as np
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.feature_extraction.text import CountVectorizer
@@ -113,8 +111,8 @@ fig.savefig(RESULTS_FOLDER + "/figures/" + "data_count_plot.png", dpi = 199)
 ### TRAIN CLASSIFIERS WITH BAG OF WORDS VECTORS
 
 vectorizers = {
-    "CountVectorizer": CountVectorizer(stop_words = 'english'),
-    "TfidfVectorizer": TfidfVectorizer(stop_words = 'english')
+    "CountVectorizer": CountVectorizer(),
+    "TfidfVectorizer": TfidfVectorizer()
 }
 
 ###
